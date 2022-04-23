@@ -16,11 +16,11 @@ Working of the Event loop: When Node.js starts, it initializes the event loop, p
 When the thread pool completes a task, a callback function is called which handles the error(if any) or does some other operation. This callback function is sent to the event queue. When the call stack is empty, the event goes through the event queue and sends the callback to the call stack.
 
 The following diagram is a proper representation of the event loop in a Node.js server:
-
+![nodejs2](https://user-images.githubusercontent.com/80479635/164878631-af7eabbc-1d24-4b8b-9a88-8550c48f5087.png)
 
 # explain the phase in each cycle
 => Phases of the Event loop: The following diagram shows a simplified overview of the event loop order of operations:
-
+![phasesofloop-300x240](https://user-images.githubusercontent.com/80479635/164878637-b2d6105e-aad7-4051-a556-4ec3689c6eb2.png)
 
  - Timers: Callbacks scheduled by setTimeout() or setInterval() are executed in this phase.
  - Pending Callbacks: I/O callbacks deferred to the next loop iteration are executed here.
